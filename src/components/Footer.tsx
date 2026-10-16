@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { GES_INFO, INSTITUTIONS } from "@/data/ges-data";
 import { Mail, Phone, MapPin, ExternalLink, ShieldCheck } from "lucide-react";
@@ -17,8 +18,14 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2 space-y-5">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-sm bg-gradient-to-br from-[#C6A477] to-[#A58356] flex items-center justify-center font-serif text-white font-bold text-xl tracking-wider shadow">
-                G
+              <div className="bg-white px-2.5 py-1.5 rounded-sm shadow-sm flex items-center justify-center shrink-0 border border-white/20">
+                <Image
+                  src="/ges-logo-internal.png"
+                  alt="GES Quality Education Logo"
+                  width={82}
+                  height={40}
+                  className="h-7 w-auto object-contain"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-serif tracking-widest text-lg font-normal text-white">
